@@ -1,0 +1,24 @@
+.idea/
+.idea/*
+dbg/settings.py
+/dbg/settings.py
+app/migrations/00*
+documents/
+documents/*
+dbgenv/*
+dbgenv/
+**/__pycache__/
+media/
+media/*
+static/admin/
+static/rest_framework/
+static/rest_framework_docs/
+dbg/.settings.py.swp
+*.swp
+dbg/__init__.pyc
+dbg/settings.pyc
+
+
+# MacOS
+*.DS_Store
+tests/*
