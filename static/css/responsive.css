@@ -1,0 +1,152 @@
+@media (min-width: 992px) and (max-width: 1169px) {
+.add-content h2 {
+  font-size: 40px;
+}
+
+}
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-header a.navbar-brand {
+  padding: 12px 0;
+}
+.header-bottom h1 {
+  font-size: 50px;
+}
+.testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-dots {
+  display:none;
+}
+.single-about {
+  padding:0px;
+}
+.self-head > p {
+  font-size: 14px;
+}
+.skills-idea li {
+  float: left;
+  margin-right: 20px;
+}
+.skills-idea ul li a i {
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 8px 20px 0;
+  width: 40px;
+}
+.add-content h2 {
+  font-size: 29px;
+}
+
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {width:300px}
+.banner-mar {
+  margin-bottom: 0;
+}
+.logo {
+  height: inherit;
+  left: 20;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  z-index: 999999;
+}
+.logo a {
+  padding: 0;
+}
+.header-bottom h1 {
+  font-size: 26px;
+  margin: 15px 0;
+}
+.self-head {
+  margin: 0;
+}
+.add-btn {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+.add-btn.left-btn {
+  margin-right: 5px;
+}
+.self-img > a {
+  margin-bottom: 30px;
+}
+.single-about {
+  padding: 0;
+  margin-bottom: 30px;
+}
+.project-menu li a {
+  font-size: 12px;
+  margin: 8px 4px;
+  padding: 8px 10px;
+}
+.single-awesome-project {
+  float: none;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+.single-blog {
+  margin-bottom: 30px;
+}
+.add-content {
+  text-align: center;
+}
+.main-menu .nav.navbar-nav{
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  margin-top: 0;
+}
+.main-menu ul.navbar-nav li a {
+  padding: 12px 15px;
+}
+.stick .navbar-header a.navbar-brand {
+  display: inline-block;
+  height: 60px;
+  padding: 16px 0 6px;
+}
+.stick .navbar-default .navbar-toggle {
+  padding: 25px 0;
+}
+.main-menu ul.navbar-nav li {
+  display: block;
+}
+.stick .main-menu ul.nav > li > a {
+  padding: 10px 15px;
+}
+/*
+.stick .main-menu .nav.navbar-nav{
+ background: #fff;
+
+}*/
+
+.stick .main-menu ul.nav > li > a{
+  color:#FFFFFF;
+}
+.stick .main-menu ul.navbar-nav li.active a::after {
+  border: none;
+}
+.main-menu ul.navbar-nav li.active a::after {
+  border:none;
+}
+.pagination {
+  margin: 20px 0;
+}
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+
+.header-bottom h1 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+.add-btn {
+  font-size: 18px;
+  padding: 14px 25px;
+}
+.add-content h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+}

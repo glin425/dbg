@@ -1,0 +1,95 @@
+header {
+    background-image: url("../img/background/header.jpg");
+}
+
+.navbar-header a.navbar-brand,
+.stick .navbar-header a.navbar-brand{
+  padding:0px;
+  display:block;
+  width:100%;
+}
+.navbar-header a.navbar-brand h5{
+  float:left;
+  margin-left:20px;
+  margin-top:20px;
+  font-size:20px;
+  color:#FFFFFF;
+}
+.navbar-header a.navbar-brand img{
+  float:left;
+}
+
+.stick .navbar-brand.sticky-logo > img,
+.stick .navbar-header a h4{
+  display:inline-block;
+}
+
+.main-menu ul.navbar-nav li.active a::after,
+.stick .main-menu ul.navbar-nav li.active a::after{
+  border:0px;
+}
+
+.main-menu ul.navbar-nav li.active a,
+.main-menu ul.navbar-nav li.active a:hover,
+.stick .main-menu ul.nav > li.active > a,
+.stick .main-menu ul.nav > li.active > a:hover{
+  background: #0064CA;
+  margin-top:20px;
+  padding:10px;
+  border-radius:50px;
+  color:#FFFFFF;
+}
+.navbar-header{
+  width:300px;
+}
+#sticker h4{
+  display:none;
+}
+#sticker.stick h4{
+  display:inline-block;
+}
+
+.header-area{
+  z-index:100;
+}
+
+.vbox-title{
+  height:auto;
+  overflow:visible;
+  line-height:19px;
+}
+
+div.contact-form{
+  background-color:rgba(255, 255, 255, 0.60);
+  padding:5%;
+  border-radius:40px;
+}
+.contact-form .contact-btn{
+  background-color:#FFFFFF;
+}
+
+
+
+@media (max-width: 1024px){
+  .main-menu ul.navbar-nav li a,
+  .stick .main-menu ul.nav > li > a{
+    font-size:11px;
+  }
+}
+@media (max-width: 767px){
+  .navbar-brand > img,
+  .sticky-logo > img {
+      width: 50px;
+  }
+  .navbar-brand{
+    margin-top:10px;
+  }
+  .navbar-brand h4{
+    font-size:15px;
+  }
+
+  .main-menu ul.navbar-nav li{
+    text-align:center;
+  }
+
+}

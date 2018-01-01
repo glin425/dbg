@@ -1,0 +1,123 @@
+{% load static %}
+
+<header>
+    <!-- Start Top Header -->
+    <div id="sticker" class="header-area">
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Brand -->
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="{% static 'img/logo/logo.png' %}" alt="">&nbsp; <h5>Designed By Gerry</h5></a>
+                    <a class="navbar-brand page-scroll sticky-logo" href="#page-top"><img src="{% static 'img/logo/logo2.png' %}" alt="">&nbsp; <h4>Designed By Gerry</h4></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if myuser %}
+                            <li class="active">
+                                <a class="page-scroll" href="{% url 'logout' %}">Logout</a>
+                            </li>
+
+                        {% endif %}
+
+                    </ul>
+                </div>
+                <!-- navbar-collapse -->
+            </nav>
+            <!-- END: Navigation -->
+        </div>
+    </div>
+    <!-- End Top Header -->
+    <!-- Start Bottom Header -->
+    <div id="home" class="header-img">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="header-bottom">
+                        {% if myuser %}
+                            yes
+                        {% else %}
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-signup">Signup</button>
+
+                            <div class="modal fade bs-modal-signup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <form id="fmSignup" method="POST">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control" name="first_name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control" name="last_name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" class="form-control" name="username">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" class="form-control" name="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Confirm Password</label>
+                                                <input type="password" class="form-control" name="confirm_password">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="btnSignup" class="btn btn-primary" type="button" value="submit" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <script type="text/javascript">
+                                $('#btnSignup').on('click', function(){
+
+                                    $.ajax({
+                                        method: "POST",
+                                        url: '{% url 'register' %}',
+                                        data: $('#fmSignup').serializeArray(),
+                                        success: function (response) {
+                                            if (response.result === 'ok') {
+                                                swal({
+                                                    title: "Success",
+                                                    text: response.message,
+                                                    type: "success"
+                                                }).then(function() {
+                                                    window.location.reload();
+                                                });
+
+                                            }else{
+                                                swal('Oops...', response.message, 'error');
+                                            }
+                                        }
+                                    });
+                                });
+                            </script>
+                        {% endif %}
+{#                        <h3 class="helo">Hello, I'm</h3>#}
+{#                        <h1>Gerry Linendoll</h1>#}
+{#                        #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Bottom Header -->
+</header>
